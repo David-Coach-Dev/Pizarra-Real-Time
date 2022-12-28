@@ -1,15 +1,17 @@
 const express = require('express');
+const path = require('path');
 //initialize
 const app = express();
-const port = 3000;
+const p = 3000;
 //settings
-app.set('port', process.env.PORT || port);
+app.set('port', process.env.PORT || p);
 //middleware
 
 //routes
 
 //static files
-
+app.use(express.static(path.join(__dirname, 'public')));
 //starting server
-app.listen(app.get('port'));
-console.log('server on port ', port);
+app.listen(app.get('port'),() => {;
+  console.log('server on port ', p);
+});
