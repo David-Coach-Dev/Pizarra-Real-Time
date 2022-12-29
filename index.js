@@ -20,5 +20,5 @@ require('./src/sockets')(io);
 app.use(express.static('public'));
 //starting server
 server.listen(app.get('port'),() => {
-  console.log('server on port ', p);
+  console.log('server on port ', p ,' http://localhost:3000/');
 });
