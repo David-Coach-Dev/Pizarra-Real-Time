@@ -12,7 +12,7 @@ app.set('port', process.env.PORT || p);
 //middleware
 
 //sockets
-require('./sockets')(io);
+require('./src/sockets')(io);
 
 //routes
 
